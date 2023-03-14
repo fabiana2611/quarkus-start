@@ -1,5 +1,7 @@
 package org.acme.quickstart.controller;
 
+import org.acme.quickstart.domain.invoice.Invoice;
+import org.acme.quickstart.domain.invoice.InvoiceConfiguration;
 import org.eclipse.microprofile.config.Config;
 import org.eclipse.microprofile.config.ConfigProvider;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
@@ -29,6 +31,9 @@ public class ConfigResource {
     @Inject
     Config config;
 
+    @Inject
+    InvoiceConfiguration invoiceConfiguration;
+
     @ConfigProperty(name = "greeting.message")
     String message;
 
@@ -49,7 +54,8 @@ public class ConfigResource {
         Float value1 = config.getValue("invoice.vatRate", Float.class);
         Config configLocal = ConfigProvider.getConfig();
         Float value2 = configLocal.getValue("invoice.vatRate", Float.class);
-        return value1 + value2;
+        Float value3 = invoiceConfiguration.vatRate;
+        return value1 + value2 + value3;
     }
 
     // TEst: curl http://localhost:8080/hello

@@ -8,16 +8,16 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/percentage")
+//@Path("/percentage")
 public class ConverterResource {
 
-    @ConfigProperty(name = "greeting.percentage")
-    Percentage percentage;
-
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public double percentage() {
-        return percentage.getPercentage();
-    }
+//    @ConfigProperty(name = "greeting.percentage")
+//    Percentage percentage;
+//
+//    @GET
+//    @Produces(MediaType.TEXT_PLAIN)
+//    public double percentage() {
+//        return percentage.getPercentage();
+//    }
 
 }
