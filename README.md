@@ -11,6 +11,13 @@ You can run your application in dev mode that enables live coding using:
 ./mvnw quarkus:dev
 ```
 
+The code used in this project is adatapted from the [Quarkus cookBook](https://quarkus.io/books).
+
+Some notes about the book and references to this project you can see in these two posts:
+
+- [Quarkus Part 1](https://fabiana2611.github.io/java/books/quarkus)
+- [Quarkus Part 2](https://fabiana2611.github.io/java/books/quarkus-p2)
+
 ## Packaging and running the application
 
 The application can be packaged using `./mvnw package`.
